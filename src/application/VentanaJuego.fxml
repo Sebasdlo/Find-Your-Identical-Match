@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="713.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VentanaJuegoController">
+    <children>
+        <ImageView fitHeight="762.0" fitWidth="807.0" layoutX="9.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@imagenes/portada%203.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="root" layoutX="33.0" minHeight="337.0" minWidth="439.0" prefHeight="471.0" prefWidth="693.0" AnchorPane.bottomAnchor="288.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane fx:id="body" layoutX="91.0" layoutY="16.0" prefHeight="425.0" prefWidth="584.0" styleClass="body" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="16.0">
+                    <top>
+                        <HBox fx:id="menuPanel" prefHeight="29.0" prefWidth="435.0" />
+                    </top>
+                    <center>
+                        <HBox>
+                            <GridPane fx:id="gameMatrix" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml">
+                                <padding>
+                                    <Insets bottom="25" left="25" right="25" top="25" />
+                                </padding>
+
+                            </GridPane>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <HBox layoutX="10.0" layoutY="10.0" spacing="10">
+                    <Button fx:id="start" layoutX="10.0" layoutY="10.0" onAction="#restartGame" text="Start Again" />
+                </HBox>
+                <Label fx:id="tiempoLabel" layoutX="10.0" layoutY="40.0" />
+                <Label fx:id="puntosLabel" layoutX="10.0" layoutY="70.0" text="Puntos: 0" />
+            </children>
+        </AnchorPane>
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" />
+    </effect>
+</AnchorPane>
